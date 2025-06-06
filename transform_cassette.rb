@@ -14,8 +14,9 @@ json_str = first_interaction['response']['body']['string']
 first_interaction['']
 parsed_json = JSON.parse(json_str)
 parsed_json["next_cursor"] = nil
-# puts "Parsed JSON: #{parsed_json["next_cursor"]}"
-parsed_json['items'] = parsed_json['items'].first(3)
+
+limit_count = 3
+parsed_json['items'] = parsed_json['items'].first(limit_count)
 
 # this can be used to extract Ruby hash for the spec file test of item[0]
 # grab this value from the console output and use it in the spec file
