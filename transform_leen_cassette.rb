@@ -22,7 +22,7 @@ parsed_json['items'] = parsed_json['items'].first(item_limit)
 
 # NOTE: this can be used to extract Ruby hash for the spec file test of item[0]
 # Uncomment the below and grab printed ruby hash from the console output and use it in the spec file
-puts "Parsed JSON: #{parsed_json['items'][0]}"
+puts "First Object : \n#{parsed_json['items'][0]}"
 
 first_interaction['response']['body']['string'] = JSON.generate(parsed_json)
 # puts first_interaction['response']['body']['string']
